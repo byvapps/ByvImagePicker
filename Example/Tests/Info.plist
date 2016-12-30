@@ -20,5 +20,9 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Is needed</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Is needed</string>
 </dict>
 </plist>
