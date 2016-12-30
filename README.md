@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/ByvImagePicker.svg?style=flat)](http://cocoapods.org/pods/ByvImagePicker)
 
 
-ByvImagePicker is a NSObject class that can present an action sheet to select the UIImagePickerController source type and let edit image with TOCropViewController in 3 different ways.
+ByvImagePicker is a NSObject class that can present an action sheet to select the UIImagePickerController source type and let edit image with [TOCropViewController](https://github.com/TimOliver/TOCropViewController) in 3 different ways.
 
 ## Usage
 
