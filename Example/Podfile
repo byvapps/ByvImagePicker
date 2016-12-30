@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ByvImagePicker_Example' do
+  pod 'ByvImagePicker', :path => '../'
+
+  target 'ByvImagePicker_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
