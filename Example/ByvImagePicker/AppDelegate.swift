@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  ByvImagePicker
 //
-//  Created by Adrian Apodaca macbook air on 12/30/2016.
-//  Copyright (c) 2016 Adrian Apodaca macbook air. All rights reserved.
+//  Created by Adrian Apodaca on 12/30/2016.
+//  Copyright (c) 2016 Adrian Apodaca. All rights reserved.
 //
 
 import UIKit

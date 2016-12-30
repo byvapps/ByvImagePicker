@@ -24,7 +24,7 @@ With ByvImagePicker you can in one method display an action sheet to choose came
   s.homepage         = 'https://github.com/byvapps/ByvImagePicker'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Adrian Apodaca macbook air' => 'adrian@byvapps.com' }
+  s.author           = { 'Adrian Apodaca' => 'adrian@byvapps.com' }
   s.source           = { :git => 'https://github.com/byvapps/ByvImagePicker.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/byvapps'
 

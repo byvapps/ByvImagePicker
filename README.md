@@ -1,6 +1,6 @@
 # ByvImagePicker
 
-[![CI Status](http://img.shields.io/travis/Adrian Apodaca macbook air/ByvImagePicker.svg?style=flat)](https://travis-ci.org/Adrian Apodaca macbook air/ByvImagePicker)
+[![CI Status](http://img.shields.io/travis/Adrian_Apodaca/ByvImagePicker.svg?style=flat)](https://travis-ci.org/Adrian_Apodaca/ByvImagePicker)
 [![Version](https://img.shields.io/cocoapods/v/ByvImagePicker.svg?style=flat)](http://cocoapods.org/pods/ByvImagePicker)
 [![License](https://img.shields.io/cocoapods/l/ByvImagePicker.svg?style=flat)](http://cocoapods.org/pods/ByvImagePicker)
 [![Platform](https://img.shields.io/cocoapods/p/ByvImagePicker.svg?style=flat)](http://cocoapods.org/pods/ByvImagePicker)
@@ -79,7 +79,7 @@ pod "ByvImagePicker"
 
 ## Author
 
-Adrian Apodaca macbook air, adrian@byvapps.com
+Adrian Apodaca, adrian@byvapps.com
 
 ## License
 
