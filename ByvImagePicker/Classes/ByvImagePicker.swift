@@ -131,30 +131,33 @@ public class ByvImagePicker: NSObject, UIImagePickerControllerDelegate, UINaviga
                 return
             }
         }
-        picker.dismiss(animated: true, completion: nil)
         if let comp = pickerCompletion {
             let ori = info["UIImagePickerControllerOriginalImage"] as? UIImage
             comp(ori)
         }
+        picker.dismiss(animated: true, completion: nil)
     }
     
     public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
         if let comp = pickerCompletion {
             comp(nil)
         }
+        picker.dismiss(animated: true, completion: nil)
     }
     
     // MARK: - TOCropViewControllerDelegate methods
     
     public func cropViewController(_ cropViewController: TOCropViewController, didCropTo image: UIImage, with cropRect: CGRect, angle: Int) {
-        imagePicker.dismiss(animated: true, completion: nil)
         if let comp = pickerCompletion {
             comp(image)
         }
+        imagePicker.dismiss(animated: true, completion: nil)
     }
     
     public func cropViewController(_ cropViewController: TOCropViewController, didFinishCancelled cancelled: Bool) {
+        if let comp = pickerCompletion {
+            comp(nil)
+        }
         if cancelled {
             imagePicker.dismiss(animated: true, completion: nil)
         }
