@@ -14,6 +14,23 @@ import TOCropViewController
 public typealias ByvImagePickerCompletion = (UIImage?) -> Void
 public typealias ByvFrom = (controller:UIViewController, from:CGRect, inView:UIView, arrowDirections:UIPopoverArrowDirection)
 
+extension UIApplication {
+    class func topViewController(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+        if let navigationController = controller as? UINavigationController {
+            return topViewController(controller: navigationController.visibleViewController)
+        }
+        if let tabController = controller as? UITabBarController {
+            if let selected = tabController.selectedViewController {
+                return topViewController(controller: selected)
+            }
+        }
+        if let presented = controller?.presentedViewController {
+            return topViewController(controller: presented)
+        }
+        return controller
+    }
+}
+
 public class ByvImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate, TOCropViewControllerDelegate {
     
     var pickerCompletion:ByvImagePickerCompletion? = nil
@@ -88,7 +105,7 @@ public class ByvImagePicker: NSObject, UIImagePickerControllerDelegate, UINaviga
     func getCameraImage(from:UIViewController, completion: @escaping ByvImagePickerCompletion) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             imagePicker.sourceType = .camera
-            if let vc = UIApplication.shared.windows[0].rootViewController {
+            if let vc = UIApplication.topViewController()  {
                 
                 vc.present(imagePicker, animated: true, completion: nil)
             }
