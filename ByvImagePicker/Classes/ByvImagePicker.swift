@@ -49,6 +49,8 @@ public class ByvImagePicker: NSObject, UIImagePickerControllerDelegate, UINaviga
         self.customAspectRatio = customAspectRatio
         let av = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
+        pickerCompletion = completion
+        
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             av.addAction(UIAlertAction(title: NSLocalizedString("Sacar foto", comment:""), style: .default, handler: { (action) in
                 self.getCameraImage(from: from.controller, completion: completion)
@@ -60,6 +62,7 @@ public class ByvImagePicker: NSObject, UIImagePickerControllerDelegate, UINaviga
             }))
         }
         av.addAction(UIAlertAction(title: NSLocalizedString("Cancelar", comment: ""), style: .cancel, handler: { (action) in
+            completion(nil)
             av.dismiss(animated: true, completion: nil)
         }))
         
@@ -86,7 +89,7 @@ public class ByvImagePicker: NSObject, UIImagePickerControllerDelegate, UINaviga
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             imagePicker.sourceType = .camera
             if let vc = UIApplication.shared.windows[0].rootViewController {
-                pickerCompletion = completion
+                
                 vc.present(imagePicker, animated: true, completion: nil)
             }
         }
