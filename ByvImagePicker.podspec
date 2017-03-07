@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ByvImagePicker'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'Library to pick image from camera or library and edit or crop image'
 
 # This description is used to generate tags and improve search results.

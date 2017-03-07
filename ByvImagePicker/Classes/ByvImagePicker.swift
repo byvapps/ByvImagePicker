@@ -88,10 +88,7 @@ public class ByvImagePicker: NSObject, UIImagePickerControllerDelegate, UINaviga
     func getCameraImage(from:UIViewController, completion: @escaping ByvImagePickerCompletion) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             imagePicker.sourceType = .camera
-            if let vc = UIApplication.shared.windows[0].rootViewController {
-                
-                vc.present(imagePicker, animated: true, completion: nil)
-            }
+            from.present(imagePicker, animated: true, completion: nil)
         }
     }
     
