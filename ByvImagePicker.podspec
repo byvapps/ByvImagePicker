@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ByvImagePicker'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'Library to pick image from camera or library and edit or crop image'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,8 @@ With ByvImagePicker you can in one method display an action sheet to choose came
   s.source           = { :git => 'https://github.com/byvapps/ByvImagePicker.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/byvapps'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
 
   s.source_files = 'ByvImagePicker/Classes/**/*'
   
@@ -38,6 +39,6 @@ With ByvImagePicker you can in one method display an action sheet to choose came
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'ByvUtils'
-  s.dependency 'TOCropViewController'
+  s.dependency 'ByvUtils', '~> 1.1'
+  s.dependency 'TOCropViewController', '2.3.4'
 end
